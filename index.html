@@ -1,99 +1,467 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edoardo Ciarrocchi - Software Engineer</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edoardo Ciarrocchi — Backend Developer</title>
+  <meta name="description" content="Edoardo Ciarrocchi — Software Engineer specializzato in backend Java/Kotlin, architetture a microservizi e cloud (AWS, Azure).">
+
+  <meta property="og:title" content="Edoardo Ciarrocchi — Backend Developer">
+  <meta property="og:description" content="Software Engineer specializzato in backend Java/Kotlin, microservizi e cloud.">
+  <meta property="og:url" content="https://endless8.github.io/personal-page/">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="profile-picture">
-            <img src="https://media.licdn.com/dms/image/D4D35AQHIgA68hstdKA/profile-framedphoto-shrink_200_200/0/1698939014963?e=1710262800&v=beta&t=VdQ5hKqjsjBHUNF51hw2pJWHuwqLZu7UhabOVckNOkg" alt="Profile Picture">
-            <div class="profile-info">
-                <h1>Edoardo Ciarrocchi</h1>
-                <p>Software Engineer 🖥️</p>
-            </div>
+
+  <!-- Background grid -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">EC</span>
+        <span class="logo-text">Edoardo Ciarrocchi</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <a href="#about">Profilo</a>
+        <a href="#experience">Esperienze</a>
+        <a href="#skills">Competenze</a>
+        <a href="#education">Formazione</a>
+        <a href="#contact">Contatti</a>
+      </nav>
+      <button class="lang-toggle" id="langToggle" aria-label="Cambia lingua / Switch language">
+        <span class="lang-option active" data-lang="it">IT</span>
+        <span class="lang-divider">/</span>
+        <span class="lang-option" data-lang="en">EN</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow" data-i18n="hero.eyebrow">Backend Developer — Java &amp; Cloud Specialist</p>
+        <h1 class="hero-title">
+          <span data-i18n="hero.title1">Costruisco sistemi backend</span><br>
+          <span class="hero-title-accent" data-i18n="hero.title2">pensati per durare e crescere.</span>
+        </h1>
+        <p class="hero-lede" data-i18n="hero.lede">
+          7 anni di esperienza su microservizi Java &amp; Kotlin, architetture event-driven e infrastrutture cloud.
+          Dalla progettazione di sistemi per il settore sanitario alla gestione dell'identità in ambito enterprise.
+        </p>
+        <div class="hero-actions">
+          <a href="#experience" class="btn btn-primary" data-i18n="hero.cta1">Vedi le esperienze</a>
+          <a href="cv/CV_Edoardo_Ciarrocchi.pdf" class="btn btn-outline" id="cvDownload" download data-i18n="hero.cta2">Scarica CV (PDF)</a>
         </div>
-    </header>
+      </div>
 
-    <section>
-        <h2>Contact 📞</h2>
-        <p>Phone: +39 349 068 7826</p>
-        <p>Email: edoardo.ciarrocchi@outlook.it</p>
-        <p>LinkedIn: <a href="https://it.linkedin.com/in/edoardo-ciarrocchi-3660b192" target="_blank">Edoardo Ciarrocchi</a> 🌐</p>
+      <!-- Signature element: blueprint system diagram -->
+      <div class="hero-diagram" aria-hidden="true">
+        <svg viewBox="0 0 460 460" class="blueprint-svg" xmlns="http://www.w3.org/2000/svg">
+          <!-- corner ticks -->
+          <g class="bp-ticks" stroke="currentColor" stroke-width="1">
+            <path d="M0 24 L24 24 L24 0" fill="none"/>
+            <path d="M436 0 L436 24 L460 24" fill="none"/>
+            <path d="M460 436 L436 436 L436 460" fill="none"/>
+            <path d="M24 460 L24 436 L0 436" fill="none"/>
+          </g>
+
+          <!-- connecting lines (drawn first, animated) -->
+          <g class="bp-lines" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path class="bp-line" d="M230 90 L230 150" />
+            <path class="bp-line" d="M230 150 L120 200" />
+            <path class="bp-line" d="M230 150 L230 200" />
+            <path class="bp-line" d="M230 150 L340 200" />
+            <path class="bp-line" d="M120 240 L120 300" />
+            <path class="bp-line" d="M230 240 L230 300" />
+            <path class="bp-line" d="M340 240 L340 300" />
+            <path class="bp-line" d="M120 300 L230 350" />
+            <path class="bp-line" d="M340 300 L230 350" />
+            <path class="bp-line" d="M230 300 L230 350" />
+            <path class="bp-line" d="M230 350 L230 400" />
+          </g>
+
+          <!-- nodes -->
+          <g class="bp-nodes">
+            <rect class="bp-node bp-node-accent" x="190" y="60" width="80" height="30" rx="2"/>
+            <text x="230" y="79" class="bp-label">API Gateway</text>
+
+            <rect class="bp-node" x="80" y="200" width="80" height="40" rx="2"/>
+            <text x="120" y="224" class="bp-label">Auth</text>
+
+            <rect class="bp-node" x="190" y="200" width="80" height="40" rx="2"/>
+            <text x="230" y="224" class="bp-label">Core</text>
+
+            <rect class="bp-node" x="300" y="200" width="80" height="40" rx="2"/>
+            <text x="340" y="224" class="bp-label">Worker</text>
+
+            <rect class="bp-node bp-node-dashed" x="80" y="300" width="80" height="40" rx="2"/>
+            <text x="120" y="324" class="bp-label">Cache</text>
+
+            <rect class="bp-node bp-node-dashed" x="190" y="300" width="80" height="40" rx="2"/>
+            <text x="230" y="324" class="bp-label">Queue</text>
+
+            <rect class="bp-node bp-node-dashed" x="300" y="300" width="80" height="40" rx="2"/>
+            <text x="340" y="324" class="bp-label">DB</text>
+
+            <rect class="bp-node bp-node-accent" x="190" y="370" width="80" height="30" rx="2"/>
+            <text x="230" y="389" class="bp-label">Client</text>
+          </g>
+        </svg>
+      </div>
     </section>
 
-    <section>
-        <h2>Skills 🛠️</h2>
-        <div class="skills">
-            <div class="skill">
-                <img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png" alt="Java Logo" class="skill-icon">
-                <p>Java</p>
-            </div>
-            <div class="skill">
-                <img src="https://img.icons8.com/color/96/000000/c-sharp-logo.png" alt="C# Logo" class="skill-icon">
-                <p>C#</p>
-            </div>
-            <div class="skill">
-                <img src="https://img.icons8.com/color/96/000000/sql.png" alt="SQL Logo" class="skill-icon">
-                <p>SQL</p>
-            </div>
-            <div class="skill">
-                <img src="https://img.icons8.com/color/96/000000/react-native.png" alt="React Logo" class="skill-icon">
-                <p>React</p>
-            </div>
-            <div class="skill">
-                <img src="https://img.icons8.com/color/96/000000/javascript.png" alt="JavaScript Logo" class="skill-icon">
-                <p>JavaScript</p>
-            </div>
-            <div class="skill">
-                <img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS Logo" class="skill-icon">
-                <p>CSS</p>
-            </div>
-            <div class="skill">
-                <img src="https://img.icons8.com/color/96/000000/html-5.png" alt="HTML Logo" class="skill-icon">
-                <p>HTML</p>
-            </div>
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="about">
+      <div class="section-head">
+        <span class="section-index">01</span>
+        <h2 data-i18n="about.heading">Profilo</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-i18n="about.p1">
+            Sono un Software Engineer specializzato nello sviluppo backend in Java e Kotlin, con un focus su
+            architetture a microservizi su cloud (AWS, Azure). Ho lavorato su progetti di reingegnerizzazione
+            per enti pubblici — tra cui il Sistema Informativo Trapianti del Ministero della Salute e un
+            progetto per il MIMIT — e su sistemi di identity &amp; access management in ambito enterprise.
+          </p>
+          <p data-i18n="about.p2">
+            Mi interessano i sistemi event-driven, la containerizzazione e tutto ciò che riguarda CI/CD e cloud
+            computing. In progetti recenti ho contribuito a decisioni funzionali e architetturali — dalla scelta
+            dello stack alla modellazione dei dati — e punto a crescere verso ruoli con maggiore responsabilità
+            tecnica.
+          </p>
+          <p class="about-aside" data-i18n="about.p3">
+            Prima del software, ho studiato Architettura: un percorso che, a ben pensarci, condivide più cose
+            con l'ingegneria del software di quanto sembri — entrambi parlano di struttura, vincoli e sistemi
+            che devono reggere nel tempo. Fuori dal lavoro, suono la batteria.
+          </p>
         </div>
+        <div class="about-meta">
+          <div class="meta-card">
+            <span class="meta-label" data-i18n="about.meta.location">Base</span>
+            <span class="meta-value" data-i18n="about.meta.locationValue">San Benedetto del Tronto (AP), Italia</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label" data-i18n="about.meta.role">Ruolo attuale</span>
+            <span class="meta-value">Software Developer @ TeamSystem</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label" data-i18n="about.meta.focus">Focus</span>
+            <span class="meta-value">Java · Kotlin · Microservizi · Cloud</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label" data-i18n="about.meta.languages">Lingue</span>
+            <span class="meta-value" data-i18n="about.meta.languagesValue">Italiano (madrelingua) · Inglese (B2)</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-        <h2>Work Experience 💼</h2>
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="experience">
+      <div class="section-head">
+        <span class="section-index">02</span>
+        <h2 data-i18n="experience.heading">Esperienze Lavorative</h2>
+      </div>
 
-        <h3>Softlab Next - June 2023 to December 2023</h3>
-        <p>Senior Backend Developer responsible for the development and maintenance of Microservices developed in Java and SpringBoot for the re-engineering of the Transplant Information System for the Ministry of Health.</p>
+      <div class="timeline">
 
-        <h3>K-Rev - March 2023 to June 2023</h3>
-        <p>Software Engineer, DevOps/Cloud Engineer training course to expand Cloud skills and manage the infrastructure of a personnel evaluation application.</p>
+        <!-- TeamSystem -->
+        <article class="timeline-item" data-expanded="true">
+          <div class="timeline-marker">
+            <span class="marker-dot marker-dot-current" aria-hidden="true"></span>
+          </div>
+          <div class="timeline-card">
+            <button class="card-header" aria-expanded="true">
+              <div class="card-heading">
+                <h3>Software Developer</h3>
+                <p class="card-org">TeamSystem</p>
+              </div>
+              <div class="card-meta">
+                <span class="card-dates" data-i18n="exp.teamsystem.dates">Dic 2025 — Presente</span>
+                <span class="chevron" aria-hidden="true"></span>
+              </div>
+            </button>
+            <div class="card-body">
+              <ul class="card-bullets">
+                <li data-i18n="exp.teamsystem.b1">Sviluppo, manutenzione e deploy (CI/CD su GitLab e ArgoCD/Kubernetes) di microservizi Java/Kotlin con Spring Boot nel dominio IAM, sia greenfield che su sistemi esistenti.</li>
+                <li data-i18n="exp.teamsystem.b2">Integrazione di servizi con Apache Kafka e Azure Service Bus per comunicazione event-driven, gestione cache con Redis e migrazioni database con Flyway su PostgreSQL.</li>
+                <li data-i18n="exp.teamsystem.b3">Load testing di applicativi esistenti per l'identificazione di bottleneck di performance.</li>
+                <li data-i18n="exp.teamsystem.b4">Redazione di documentazione tecnica sui processi di sviluppo, in un team di 12 persone.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Java</span><span class="tag">Kotlin</span><span class="tag">Spring Boot</span>
+                <span class="tag">Kubernetes</span><span class="tag">ArgoCD</span><span class="tag">Kafka</span>
+                <span class="tag">Azure Service Bus</span><span class="tag">Redis</span><span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+        </article>
 
-        <h3>Supernova Hub - May 2022 to March 2023</h3>
-        <p>Backend Developer working on the C# and .NET technology stack for a warehouse management and customer order tracking system.</p>
+        <!-- IBM -->
+        <article class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-dot" aria-hidden="true"></span>
+          </div>
+          <div class="timeline-card">
+            <button class="card-header" aria-expanded="false">
+              <div class="card-heading">
+                <h3>Back End Developer Senior</h3>
+                <p class="card-org">IBM</p>
+              </div>
+              <div class="card-meta">
+                <span class="card-dates" data-i18n="exp.ibm.dates">Mag 2024 — Nov 2025</span>
+                <span class="chevron" aria-hidden="true"></span>
+              </div>
+            </button>
+            <div class="card-body">
+              <ul class="card-bullets">
+                <li data-i18n="exp.ibm.b1">Co-responsabile, con un collega e sotto la supervisione dell'architetto, delle decisioni funzionali e architetturali del backend del progetto MIMIT (Java/Quarkus su AWS).</li>
+                <li data-i18n="exp.ibm.b2">Adattamento della logica applicativa e dei modelli dati a seguito della migrazione del database da relazionale a NoSQL, gestendo i casi di mismatch tra i due paradigmi.</li>
+                <li data-i18n="exp.ibm.b3">Sviluppo di funzioni serverless (AWS Lambda) per la generazione asincrona di thumbnail da immagini caricate dagli utenti.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Java</span><span class="tag">Quarkus</span><span class="tag">AWS</span>
+                <span class="tag">AWS Lambda</span><span class="tag">NoSQL</span>
+              </div>
+            </div>
+          </div>
+        </article>
 
-        <h3>Relatech - November 2021 to May 2022</h3>
-        <p>Software Developer Engineer in Test, expanded knowledge of application testing by developing test suites in Java for a pharmaceutical retail application.</p>
+        <!-- Softlab -->
+        <article class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-dot" aria-hidden="true"></span>
+          </div>
+          <div class="timeline-card">
+            <button class="card-header" aria-expanded="false">
+              <div class="card-heading">
+                <h3>Developer Senior</h3>
+                <p class="card-org">Softlab</p>
+              </div>
+              <div class="card-meta">
+                <span class="card-dates" data-i18n="exp.softlab.dates">Giu 2023 — Dic 2023</span>
+                <span class="chevron" aria-hidden="true"></span>
+              </div>
+            </button>
+            <div class="card-body">
+              <ul class="card-bullets">
+                <li data-i18n="exp.softlab.b1">Progettazione e sviluppo di microservizi in Java e Spring Boot per il Sistema Informativo Trapianti del Ministero della Salute.</li>
+                <li data-i18n="exp.softlab.b2">Implementazione di pipeline CI/CD per l'ottimizzazione del processo di deployment.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">CI/CD</span>
+              </div>
+            </div>
+          </div>
+        </article>
 
-        <h3>SI Group / Engineering - October 2019 to November 2021</h3>
-        <p>Backend Developer responsible for developing and maintaining SOAP and REST web services code in Java and ObjectScript for healthcare applications in projects in the Veneto region.</p>
+        <!-- Supernova Hub -->
+        <article class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-dot" aria-hidden="true"></span>
+          </div>
+          <div class="timeline-card">
+            <button class="card-header" aria-expanded="false">
+              <div class="card-heading">
+                <h3>Backend Developer</h3>
+                <p class="card-org">Supernova Hub</p>
+              </div>
+              <div class="card-meta">
+                <span class="card-dates" data-i18n="exp.supernova.dates">Mag 2022 — Mar 2023</span>
+                <span class="chevron" aria-hidden="true"></span>
+              </div>
+            </button>
+            <div class="card-body">
+              <ul class="card-bullets">
+                <li data-i18n="exp.supernova.b1">Sviluppo di soluzioni su stack C#/.NET per un gestionale di magazzino e tracking ordini.</li>
+                <li data-i18n="exp.supernova.b2">Supporto nella realizzazione di funzionalità sia lato backend che frontend.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">C#</span><span class="tag">.NET</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Relatech -->
+        <article class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-dot" aria-hidden="true"></span>
+          </div>
+          <div class="timeline-card">
+            <button class="card-header" aria-expanded="false">
+              <div class="card-heading">
+                <h3>Software Development Engineer in Test</h3>
+                <p class="card-org">Relatech</p>
+              </div>
+              <div class="card-meta">
+                <span class="card-dates" data-i18n="exp.relatech.dates">Nov 2021 — Mag 2022</span>
+                <span class="chevron" aria-hidden="true"></span>
+              </div>
+            </button>
+            <div class="card-body">
+              <ul class="card-bullets">
+                <li data-i18n="exp.relatech.b1">Creazione e automazione di test suite in Java per applicativi retail farmaceutici, in collaborazione con il team di sviluppo per il miglioramento della qualità del software.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Java</span><span class="tag">JUnit</span><span class="tag">Selenium</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Gruppo SI -->
+        <article class="timeline-item">
+          <div class="timeline-marker">
+            <span class="marker-dot" aria-hidden="true"></span>
+          </div>
+          <div class="timeline-card">
+            <button class="card-header" aria-expanded="false">
+              <div class="card-heading">
+                <h3>Consulente Software</h3>
+                <p class="card-org">Gruppo SI</p>
+              </div>
+              <div class="card-meta">
+                <span class="card-dates" data-i18n="exp.gruppoSI.dates">Nov 2019 — Nov 2021</span>
+                <span class="chevron" aria-hidden="true"></span>
+              </div>
+            </button>
+            <div class="card-body">
+              <ul class="card-bullets">
+                <li data-i18n="exp.gruppoSI.b1">Sviluppo e manutenzione di web services SOAP e REST in Java e ObjectScript per progetti sanitari, con analisi dei requisiti e supporto nella definizione di soluzioni personalizzate.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Java</span><span class="tag">SOAP</span><span class="tag">REST</span><span class="tag">ObjectScript</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
     </section>
 
-    <section>
-        <h2>Education 🎓</h2>
-        <p>University of Camerino - Degree in Architecture (2005/2013)</p>
-        <p>ITCG "Umberto I" Ascoli Piceno - Surveyor (1998/2004)</p>
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="skills">
+      <div class="section-head">
+        <span class="section-index">03</span>
+        <h2 data-i18n="skills.heading">Competenze</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-block">
+          <h3 data-i18n="skills.languages.title">Linguaggi</h3>
+          <div class="tag-row">
+            <span class="tag">Java</span><span class="tag">Kotlin</span><span class="tag">C#</span><span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h3 data-i18n="skills.frameworks.title">Architettura &amp; Framework</h3>
+          <div class="tag-row">
+            <span class="tag">Spring Boot</span><span class="tag">Quarkus</span><span class="tag">Microservizi</span>
+            <span class="tag">REST API</span><span class="tag">GraphQL</span><span class="tag">Event-Driven</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h3 data-i18n="skills.data.title">Database &amp; Storage</h3>
+          <div class="tag-row">
+            <span class="tag">PostgreSQL</span><span class="tag">OracleDB</span><span class="tag">MS SQL Server</span>
+            <span class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">Amazon RDS</span>
+            <span class="tag">S3</span><span class="tag">Flyway</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h3 data-i18n="skills.cloud.title">Cloud &amp; DevOps</h3>
+          <div class="tag-row">
+            <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span>
+            <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">ArgoCD</span>
+            <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">GitLab CI</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h3 data-i18n="skills.messaging.title">Messaggistica</h3>
+          <div class="tag-row">
+            <span class="tag">Apache Kafka</span><span class="tag">Azure Service Bus</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h3 data-i18n="skills.testing.title">Testing &amp; Tooling</h3>
+          <div class="tag-row">
+            <span class="tag">JUnit</span><span class="tag">Mockito</span><span class="tag">Selenium</span>
+            <span class="tag">Gherkin</span><span class="tag">Load Testing</span><span class="tag">Git</span>
+            <span class="tag">Jira</span><span class="tag">Confluence</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-        <h2>Additional Information ℹ️</h2>
-        <p>Passionate about PC since childhood, I resumed this passion after a brief experience as an architect. Software Engineer specialized in Backend and Frontend technologies. Also passionate about music and in my free time, I like playing the drums.</p>
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="education">
+      <div class="section-head">
+        <span class="section-index">04</span>
+        <h2 data-i18n="education.heading">Formazione</h2>
+      </div>
+      <div class="education-grid">
+        <div class="edu-card">
+          <h3 data-i18n="edu.webdev.title">Corso Web Developer</h3>
+          <p class="edu-org">Gruppo SI</p>
+          <p class="edu-dates" data-i18n="edu.webdev.dates">Giu 2019 — Ott 2019</p>
+          <p data-i18n="edu.webdev.desc">Corso intensivo su Java, Spring Boot, Database e Algoritmi, con focus sulla realizzazione di applicazioni enterprise.</p>
+        </div>
+        <div class="edu-card">
+          <h3 data-i18n="edu.architecture.title">Laurea Magistrale in Architettura</h3>
+          <p class="edu-org">Scuola di Architettura e Design &ldquo;Eduardo Vittoria&rdquo;</p>
+          <p class="edu-dates" data-i18n="edu.architecture.dates">Ott 2009 — Apr 2013</p>
+          <p data-i18n="edu.architecture.desc">Percorso di studi in progettazione e composizione architettonica, con un forte focus su struttura, metodo e pensiero sistemico.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="soft-skills">
-        <h2>Soft Skills 🤝</h2>
-        <p>Teamwork</p>
-        <p>Determination</p>
-        <p>Patience</p>
-        <p>Empathy</p>
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="contact">
+      <div class="section-head">
+        <span class="section-index">05</span>
+        <h2 data-i18n="contact.heading">Contatti</h2>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:edoardo.ciarrocchi@outlook.it">
+          <span class="contact-label" data-i18n="contact.email">Email</span>
+          <span class="contact-value">edoardo.ciarrocchi@outlook.it</span>
+        </a>
+        <a class="contact-card" href="tel:+393490687826">
+          <span class="contact-label" data-i18n="contact.phone">Telefono</span>
+          <span class="contact-value">+39 349 0687826</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/edoardo-ciarrocchi-3660b192" target="_blank" rel="noopener">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">/edoardo-ciarrocchi-3660b192</span>
+        </a>
+        <a class="contact-card" href="https://github.com/Endless8" target="_blank" rel="noopener">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">@Endless8</span>
+        </a>
+      </div>
     </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Edoardo Ciarrocchi.</p>
+    <a href="#top" class="back-to-top" data-i18n="footer.top">Torna su ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
