@@ -838,8 +838,8 @@ section:last-of-type {
 
 .contact-value {
   font-weight: 600;
-  font-size: 14.5px;
-  overflow-wrap: anywhere;
+  font-size: 14px;
+  overflow-wrap: break-word;
 }
 
 /* ============================================================
